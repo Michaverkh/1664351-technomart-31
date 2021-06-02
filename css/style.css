@@ -280,6 +280,33 @@ fieldset {
   border-top: 20px solid var(--Basic-greylight);
 }
 
+/* Catalog-page page-switch-buttons.*/
+
+.page-switch-button {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid var(--Basic-greylight);
+  border-radius: 2px;
+  width: 38px;
+  height: 38px;
+}
+
+.next-page {
+  width: 140px;
+  height: 38px;
+  text-transform: uppercase;
+}
+
+/*Catalog-page perfarator-discription */
+
+.perfarator-discription {
+  background-color: var(--basic-background);
+}
+
 /* services block*/
 
 .services{
@@ -377,6 +404,11 @@ fieldset {
 }
 
 /* popular-goods */
+
+.popular-goods-item {
+  border: 1px solid var(--Basic-greylight);
+  border-radius: 2px;
+}
 
 .popular-goods-header {
   background-color: var(--Special-bege);
