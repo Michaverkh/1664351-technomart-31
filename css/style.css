@@ -1,0 +1,564 @@
+/* fonts */
+
+@font-face {
+    font-family: Cuprum;
+    src: url(../fonts/cuprum.woff2) format("woff2"), url(../fonts/cuprum.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Cuprum bold;
+    src: url(../fonts/cuprumbold.woff2) format("woff2"), url(../fonts/cuprumbold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Cuprum bold italic;
+    src: url(../fonts/cuprumbolditalic.woff2) format("woff2"), url(../fonts/cuprumbolditalic.woff) format("woff");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: PT Sans;
+    src: url(../fonts/ptsans.woff2) format("woff2"), url(../fonts/ptsans.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: PT Sans bold;
+    src: url(../fonts/ptsansbold.woff2) format("woff2"), url(../fonts/ptsansbold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Variables */
+
+:root {
+    --basic-red: #EE3643;
+    --basic-green: #63A63E;
+    --basic-gray: #3D546F;
+    --dark-gray: #293449;
+    --basic-background: #F1F5F7;
+    --Basic-greylight: #C5C5C5;
+    --special-yellow: #FFBF47;
+    --special-blue: #3BBCE3;
+    --Special-lilac: #DC91D8;
+    --Special-yellowlight: #FFD180;
+    --success: #5FBB2D;
+    --warning: #FFBF47;
+    --error: #BA2732;
+    --basic-font: #000000;
+    --custom-font: #FFFFFF;
+    --Special-greenlight: #8ED78F;
+    --Special-bege: #F7F3EC;
+  }
+
+ /* Hide element */
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+
+  /* Global */
+  
+.page-body {
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    font-family: PT Sans, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--basic-font);
+    background-color: white;
+  }
+  
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+img {
+    max-width: 100%;
+    height: auto;
+  }
+li {
+    list-style: none;
+  }
+fieldset {
+  border: none;
+}
+  /* Main header */
+
+.main-header {
+    font-family: Cuprum;
+    font-size: 18px;
+    background-color: var(--basic-background);
+  }
+
+.header-top {
+    color: var(--custom-font);
+    background-color: var(--dark-gray);
+  }
+
+.header-top label {
+  background: url(../img/decorative/icons/icon-search.svg) center left no-repeat;
+}
+
+.main-search {
+  background-color: inherit;
+  border: none;
+}
+
+.bookmarks {
+  background: url(../img/decorative/icons/icon-bookmark.svg) center left no-repeat;
+}
+
+.basket {
+  background: url(../img/decorative/icons/icon-cart.svg) center left no-repeat;
+}
+
+.make-order-button {
+  background-color: var(--basic-green);
+}
+
+.main-header-logo {
+    background-color: var(--basic-red);
+    border-bottom: 3px solid var(--error);
+  }
+  
+.header-middle .main-discription>{
+    font-family: Cuprum bold italic;
+    font-size: 16px;
+    line-height: 23px;
+    color: var(--basic-red);
+  }
+
+.header-middle p{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.call-us-button {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 30px;
+  color: var(--basic-red);
+  border: 2px solid white;
+}
+.account-button {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 21px;
+  background-color: white;
+}
+.main-nav {
+    background-color: var(--basic-gray);
+    color: var(--custom-font);
+    border-bottom: 5px solid var(--dark-gray);
+  }
+
+/*catalog-page breadcrumbs */
+
+.breadcrumb-item {
+  font-family: PT Sans;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.breadcrumb-item:first-child a {
+  display: inline-block;
+  width: 14px;
+  height: 12px;
+  background: url(../img/decorative/icons/icon-home.svg) center no-repeat;
+}
+
+.breadcrumb-item:not(:first-child) a {
+  background: url(../img/decorative/icons/icon-right-small.svg) center left no-repeat;
+}
+
+/*catalog-page main-header */
+
+.main-header-block {
+  background-color: var(--basic-background);
+}
+
+/* catalog-page filter-&-distribution */
+
+.filter-block, 
+.distribution-block,
+.price-field-range-block,
+.range-item-figure {
+  background-color: var(--Special-bege);
+}
+
+.filter-block h3, .distribution-block h3 {
+  font-family: PT Sans;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.field-name {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.range-item {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+}
+
+.companies-selection-field label,
+.charging-type-field label {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.use-filter-button {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  width: 220px;
+  height: 38px;
+  background-color: white;
+  border: 1px solid var(--Basic-greylight);
+}
+
+.distribution-item a {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--Basic-greylight);
+}
+
+.distribution-button-up,
+.distribution-button-down {
+  display: inline-block;
+  position: relative;
+}
+
+.distribution-button-up::after {
+  content: ''; 
+  position: absolute; 
+  left: 50%; 
+  bottom: 50%; 
+  border-top: 20px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid var(--Basic-greylight);
+}
+
+.distribution-button-down::after {
+  content: ''; 
+  position: absolute; 
+  left: 50%; 
+  bottom: 50%; 
+  border-bottom: 20px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid var(--Basic-greylight);
+}
+
+/* services block*/
+
+.services{
+  color: var(--custom-font);
+  }
+
+.services-list-item h3 {
+  font-family: Cuprum bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--custom-font);
+}
+
+.services-list-item a {
+  font-family: Cuprum;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--custom-font);
+  background-color: rgba(255, 255, 255, 0.3);
+  
+}
+.materials {
+  background: var(--special-yellow) url(../img/decorative/icons/icon-materials.svg) center right no-repeat;
+  }
+
+.tools {
+  background: var(--special-blue) url(../img/decorative/icons/icon-tools.svg) center right no-repeat;
+  }
+
+.equipment {
+  background: var(--Special-lilac) url(../img/decorative/icons/icon-equipment.svg) center right no-repeat;
+  }
+
+.discount {
+  background: var(--Special-greenlight) url(../img/decorative/icons/icon-discount.svg) center right no-repeat;
+}
+
+.delivery {
+  background: var(--special-yellow) url(../img/decorative/icons/icon-delivery.svg) center right no-repeat;
+}
+
+.perforators {
+  background: var(--basic-gray) url(../img/decorative/perforator.jpg) top center no-repeat;
+}
+.drills {
+  background: var(--basic-gray) url(../img/decorative/drill.jpg) top center no-repeat;
+}
+
+/* article */
+
+.main-article h3 {
+  font-family: Cuprum;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: var(--custom-font);
+}
+.main-article p {
+  font-family: Cuprum;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--custom-font);
+}
+
+.main-article .button-left {
+  display: inline-block;
+  height: 40px;
+  width: 22px;
+  background:rgba(0, 0, 0, 0) url(../img/decorative/icons/icon-left.svg) top center no-repeat;
+  border: none;
+}
+
+.main-article .button-right {
+  display: inline-block;
+  height: 40px;
+  width: 22px;
+  background:rgba(0, 0, 0, 0) url(../img/decorative/icons/icon-left.svg) top center no-repeat;
+  border: none;
+  transform: rotate(180deg);
+}
+
+.main-button {
+  font-family: Cuprum;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  color: var(--custom-font);
+  text-transform: uppercase;
+  background-color: var(--basic-red);
+}
+
+/* popular-goods */
+
+.popular-goods-header {
+  background-color: var(--Special-bege);
+}
+
+.typical-header {
+  font-family: Cuprum;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.popular-goods-item a {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+
+}
+
+.popular-goods-item p {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: line-through;
+  color: var(--Basic-greylight);
+}
+
+.popular-goods-item button {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  color: var(--custom-font);
+  
+  width: 141px;
+  height: 38px;
+  background-color: var(--basic-red);
+  border: none;
+  border-radius: 2px;
+}
+
+.popular-companies-header {
+  background-color: var(--Special-bege);
+}
+
+/* services */
+
+.services {
+  background-color: var(--basic-background);
+  color: var(--basic-font);
+  
+}
+
+.service-button {
+  font-family: Cuprum;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+  color: var(--custom-font);
+  background-color: rgba(41, 52, 73, 1);
+  height: 61px;
+  width: 240px;
+  border: none;
+  border-radius: 0;
+  border-top: 1px solid rgba(50, 66, 92, 1);
+  border-bottom: 1px solid var(--basic-font);
+}
+
+.delivery-item {
+  background: url("../img/decorative/delivery-background.svg") center right no-repeat;
+}
+
+.guarantee-item {
+  background: url("../img/decorative/garantee-background.svg") center right no-repeat;
+}
+
+.credit-item {
+  background: url("../img/decorative/credit-background.svg") center right no-repeat;
+}
+
+/* company-discription */
+
+.delivery-companies-list {
+  font-family: Cuprum;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* page-footer */
+
+.footer-top {
+  font-family: Cuprum;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--custom-font);
+  background-color: var(--basic-gray);
+}
+
+.footer-nav .site-nav:last-child {
+  color: var(--special-yellow);
+}
+
+.footer-bottom {
+  font-family: Cuprum;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--custom-font);
+  background-color: var(--dark-gray);
+}
+
+.developed-by a, .feedback a {
+  color: var(--special-yellow);
+}
+
+/* Social */
+
+.social-list .social-button {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #212A3A;
+}
+
+.social-list .vk {
+  background-image: url(../img/decorative/icons/icon-vk.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.social-list .facebook {
+  background-image: url(../img/decorative/icons/icon-fb.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.social-list .instagram {
+  background-image: url(../img/decorative/icons/icon-insta.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Modal */
+
+.appeal {
+  border-top: 7px solid var(--basic-red);
+}
+.appeal-form label {
+  font-family: Cuprum;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.appeal-form input, .appeal-form textarea {
+  font-family: PT Sans;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--Basic-greylight);
+  border: 2px solid var(--Basic-greylight);
+  resize: none;
+}
+
+.submit-button-area {
+  background-color: var(--basic-background);
+}
+
+.close-button {
+  width: 21px;
+  height: 21px;
+  background: url(../img/decorative/icons/icon-close.svg) center center no-repeat;
+  border: none;
+}
+
+
+
