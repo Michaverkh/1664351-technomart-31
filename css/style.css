@@ -55,6 +55,8 @@
     --custom-font: #FFFFFF;
     --Special-greenlight: #8ED78F;
     --Special-bege: #F7F3EC;
+    --middle-gray: #32425C;
+    --dark-red: #CA2C37;
   }
 
  /* Hide element */
@@ -102,20 +104,41 @@ fieldset {
     font-family: Cuprum;
     font-size: 18px;
     background-color: var(--basic-background);
-  }
+}
 
 .header-top {
     color: var(--custom-font);
     background-color: var(--dark-gray);
-  }
+}
 
-.header-top label {
-  background: url(../img/decorative/icons/icon-search.svg) center left no-repeat;
+.header-top .main-header-logo:active {
+  background-color: var(--dark-red);
+}
+
+.header-top a:active {
+  color: var(--Basic-greylight);
 }
 
 .main-search {
-  background-color: inherit;
+  background-color: var(--dark-gray);
   border: none;
+  color: white;
+}
+
+.main-search:focus {
+  background-color: white;
+  border: none;
+  color: var(--basic-font);
+  outline: 0;
+  outline-offset: 0;
+}
+
+.main-search:focus ~ .main-search-label {
+  background-color: white;
+}
+
+.main-search:focus ~ .main-search-label svg {
+  fill: var(--basic-red);
 }
 
 .bookmarks {
@@ -130,22 +153,27 @@ fieldset {
   background-color: var(--basic-green);
 }
 
+.make-order-button:hover {
+  background-color: var(--success);
+}
+
 .main-header-logo {
     background-color: var(--basic-red);
     border-bottom: 3px solid var(--error);
   }
   
-.header-middle .main-discription>{
+.header-middle .main-discription {
     font-family: Cuprum bold italic;
     font-size: 16px;
     line-height: 23px;
     color: var(--basic-red);
   }
 
-.header-middle p{
+.header-middle .adress{
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
+  color: var(--middle-gray);
 }
 
 .call-us-button {
@@ -161,11 +189,28 @@ fieldset {
   line-height: 21px;
   background-color: white;
 }
+
+.account-button:hover {
+  color: var(--basic-red);
+}
+
+.account-button:active {
+  color: var(--Basic-greylight);
+}
+
 .main-nav {
-    background-color: var(--basic-gray);
-    color: var(--custom-font);
-    border-bottom: 5px solid var(--dark-gray);
-  }
+  background-color: var(--middle-gray);
+  color: var(--custom-font);
+  border-bottom: 5px solid var(--dark-gray);
+}
+
+.main-nav a:hover {
+  background-color: var(--dark-gray);
+}
+
+.main-nav a:active {
+  color: var(--Basic-greylight);
+}
 
 /*catalog-page breadcrumbs */
 
@@ -194,6 +239,53 @@ fieldset {
   background-color: var(--basic-background);
 }
 
+/* catalog-page header-middle */
+
+.account-block {
+  width: 399px;
+  height: 45px;
+  background-color: white;
+}
+
+.account-block .username {
+  display: inline-block;
+  font-family: Cuprum;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 21px;
+  background: url(../img/decorative/icons/icon-user.svg) center left no-repeat;
+}
+
+.account-block a {
+  display: inline-block;
+  width: 20px;
+  height: 17px;
+  background: url(../img/decorative/icons/icon-login.svg) center no-repeat;
+}
+
+.private-area, .my-orders {
+  font-family: Cuprum;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--middle-gray);
+}
+
+.private-area:hover, .my-orders:hover {
+  color: var(--basic-red);
+}
+
+.private-area:active, .my-orders:active {
+  color: var(--Basic-greylight);
+}
+
+.point {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: var(--middle-gray);
+  border-radius: 50%;
+}
 /* catalog-page filter-&-distribution */
 
 .filter-block, 
@@ -234,10 +326,12 @@ fieldset {
 }
 
 .use-filter-button {
+  font-family: PT Sans;
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
   text-align: center;
+  text-transform: uppercase;
   width: 220px;
   height: 38px;
   background-color: white;
@@ -250,6 +344,16 @@ fieldset {
   line-height: 18px;
   text-transform: uppercase;
   color: var(--Basic-greylight);
+  border-bottom: 1px dotted var(--basic-red);
+}
+
+.distribution-item a:hover {
+  color: var(--basic-font);
+  border-bottom: 1px solid var(--basic-red);
+}
+
+.distribution-item.active a {
+  color: var(--basic-red);
 }
 
 .distribution-button-up,
@@ -289,10 +393,23 @@ fieldset {
   line-height: 18px;
   text-align: center;
   background-color: white;
-  border: 1px solid var(--Basic-greylight);
+  border: 1px solid var(--basic-background);
   border-radius: 2px;
   width: 38px;
   height: 38px;
+}
+
+.page-switch-button:hover {
+  border: 1px solid var(--Basic-greylight);
+}
+
+.page-switch-button:active {
+  border: 1px solid var(--basic-red);
+}
+
+.page-switch-button.active {
+  background-color:var(--basic-red);
+  color: white;
 }
 
 .next-page {
@@ -307,6 +424,31 @@ fieldset {
   background-color: var(--basic-background);
 }
 
+/* catalog-page notice */
+
+.notice {
+  border-top: 7px solid var(--basic-red);
+}
+
+.notice p {
+  font-family: Cuprum;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+}
+
+.notice .success-item {
+  display: inline-block;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: var(--success) url(../img/decorative/icons/Shape.svg) center no-repeat;
+}
+
+.buttons-block {
+  background-color: var(--Basic-greylight);
+}
 /* services block*/
 
 .services{
@@ -328,8 +470,16 @@ fieldset {
   text-align: center;
   color: var(--custom-font);
   background-color: rgba(255, 255, 255, 0.3);
-  
 }
+
+.services-list-item a:hover {
+  background-color: rgba(197, 197, 197, 0.3);
+}
+
+.services-list-item a:active {
+  background-color: rgba(169, 169, 169, 0.3);
+}
+
 .materials {
   background: var(--special-yellow) url(../img/decorative/icons/icon-materials.svg) center right no-repeat;
   }
@@ -393,6 +543,9 @@ fieldset {
 }
 
 .main-button {
+  display: inline-block;
+  width: 192px;
+  height: 38px;
   font-family: Cuprum;
   font-size: 14px;
   font-weight: 400;
@@ -403,11 +556,27 @@ fieldset {
   background-color: var(--basic-red);
 }
 
+.main-button:hover {
+  background-color: var(--dark-red);
+}
+
+.main-button:hover {
+  background-color: var(--error);
+}
+
+.main-button[type=button] {
+  border: none;
+}
 /* popular-goods */
 
 .popular-goods-item {
+  position: relative;
   border: 1px solid var(--Basic-greylight);
   border-radius: 2px;
+}
+
+.popular-goods-item:hover {
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
 .popular-goods-header {
@@ -420,6 +589,7 @@ fieldset {
   font-weight: 400;
   line-height: 30px;
   text-transform: uppercase;
+  color: var(--middle-gray);
 }
 
 .popular-goods-item a {
@@ -457,6 +627,15 @@ fieldset {
   background-color: var(--Special-bege);
 }
 
+.popular-companies-item:hover {
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.popular-companies-item:active {
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+  opacity: 0.5;
+}
+
 /* services */
 
 .services {
@@ -479,6 +658,21 @@ fieldset {
   border-radius: 0;
   border-top: 1px solid rgba(50, 66, 92, 1);
   border-bottom: 1px solid var(--basic-font);
+}
+
+.service-button:first-child {
+  border-top: none;
+}
+
+.service-button.active {
+  background-color: white;
+  color: var(--dark-gray);
+}
+
+.service-button:hover:not(.service-button.active) {
+  box-shadow: 0px 1px 0px 0px rgba(41, 52, 73, 1);
+  box-shadow: 0px 1px 0px 0px rgba(64, 80, 105, 1) inset;
+  background: rgba(41, 52, 73, 1);
 }
 
 .delivery-item {
@@ -510,11 +704,21 @@ fieldset {
   font-weight: 400;
   line-height: 24px;
   color: var(--custom-font);
-  background-color: var(--basic-gray);
+  background-color: var(--middle-gray);
 }
 
 .footer-nav .site-nav:last-child {
-  color: var(--special-yellow);
+  color: var(--Special-yellowlight);
+}
+
+.footer-nav .site-nav a:hover,
+.developed-by a:hover,
+.feedback a:hover {
+  text-decoration: underline;
+}
+
+.footer-nav .site-nav a:active {
+  opacity: 0.3;
 }
 
 .footer-bottom {
@@ -527,7 +731,11 @@ fieldset {
 }
 
 .developed-by a, .feedback a {
-  color: var(--special-yellow);
+  color: var(--Special-yellowlight);
+}
+
+.developed-by a:active, .feedback a:active {
+  color: var(--basic-red);
 }
 
 /* Social */
@@ -538,6 +746,10 @@ fieldset {
   height: 44px;
   border-radius: 50%;
   background-color: #212A3A;
+}
+
+.social-button:hover {
+  background-color: var(--basic-red);
 }
 
 .social-list .vk {

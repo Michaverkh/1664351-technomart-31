@@ -15,8 +15,17 @@
             <a class="main-header-logo" href="index.html">
               <img src="img/content/logo-technomart.svg" width="108" height="18" alt="логотип Техномарт" style="background-color: red;">
             </a>
-            <label class="main-search" for="search-id">Поиск</label>
-            <input type="text" name="search" id="search-id">
+            <input class="main-search" type="text" name="search" id="search-id" placeholder="Поиск">
+            <label class="main-search-label" for="search-id">
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.3"></g>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
+                </g>
+              </svg>
+              <span class="visually-hidden">
+                Поиск
+              </span>
+            </label>
             <a class="bookmarks" href="#">Закладки: 
               <span>0</span>
             </a>
@@ -29,11 +38,16 @@
         <section class="header-middle">
             <p class="main-discription">Интернет-магазин строительных материалов и инструментов для ремонта</p>
             <a class="call-us-button" href="tel:+78005558628">+7 (800) 555-86-28</a>
-            <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
-            <p>Иван Иванов</p>
-            <a href="#">Выйти</a>
-            <a href="#">Мои заказы</a>
-            <a href="#">Личный кабинет</a>
+            <p class="adress">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
+            <div class="account-block">
+              <p class="username">Иван Иванов</p>
+              <a href="#">
+                <span class="visually-hidden">Выйти</span>
+              </a>
+            </div>
+            <a class="my-orders" href="#">Мои заказы</a>
+            <span class="point"></span>
+            <a class="private-area" href="#">Личный кабинет</a>
         </section>
 
         <nav class="main-nav">
@@ -143,7 +157,7 @@
           <div class="distribution-block">
             <h3>Сортировка:</h3>
             <ul>
-              <li class="distribution-item">
+              <li class="distribution-item active">
                   <a href="#">По цене</a>
               </li>
               <li class="distribution-item">
@@ -213,7 +227,7 @@
           </ul>
           <ul>
               <li>
-                <a class="page-switch-button">1</a>
+                <a class="page-switch-button active">1</a>
               </li>
               <li>
                 <a class="page-switch-button" href="#">2</a>
@@ -312,12 +326,15 @@
       </section>
     </footer>
 
-      <section>
-          <h2>Уведомление</h2>
-          <p>Товар добавлен в корзину</p>
-          <button type="button">Закрыть</button>
-          <a href="#">Оформить заказ</a>
-          <button type="button">Продолжить покупки</button>
+      <section class="notice">
+          <h2 class="visually-hidden">Уведомление</h2>
+          <span class="success-item"></span>
+          <p>Товар добавлен в корзину!</p>
+          <button class="close-button" type="button"></button>
+          <div class="buttons-block">
+            <a class="main-button" href="#">Оформить заказ</a>
+            <a class="main-button" href="#"> Продолжить покупки</a>
+          </div>
       </section>
 </body>
 </html>

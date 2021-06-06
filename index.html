@@ -15,8 +15,17 @@
         <a class="main-header-logo">
           <img class="main-header-logo-image" src="img/content/logo-technomart.svg" width="108" height="18" alt="логотип Техномарт">
         </a>
-        <label for="search-id">Поиск</label>
-        <input class="main-search" type="text" name='search' id="search-id">
+        <input class="main-search" type="text" name="search" id="search-id" placeholder="Поиск">
+        <label class="main-search-label" for="search-id">
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.3"></g>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
+            </g>
+          </svg>
+          <span class="visually-hidden">
+            Поиск
+          </span>
+        </label>
         <a class="bookmarks" href="#">
           Закладки: 
           <span>0</span>
@@ -33,7 +42,7 @@
       <section class="header-middle">
         <h1 class="main-discription">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
         <a class="call-us-button" href="tel:+78005558628">+7 (800) 555-86-28</a>
-        <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
+        <p class="adress">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
         <a class="account-button log-in" href="#">Войти</a>
         <a class="account-button check-in" href="#">Регистрация</a>
       </section>
@@ -152,43 +161,43 @@
           <h2 class="typical-header">Популярные производители:</h2>
           <a class="main-button show-all-companies" href="">все популярные производители</a>
        </div> 
-       <ul>
-         <li>
-           <a href="#">
+       <ul class="popular-companies-list">
+         <li class="popular-companies-item">
+          <a href="#">
              <img src="img/content/companies/bosch.jpg" width="126" height="37" alt="логотип BOSCH">
-            </a>
-          </li>
-         <li>
+          </a>
+        </li>
+         <li class="popular-companies-item">
            <a href="#">
              <img src="img/content/companies/makita.jpg" width="123" height="40" alt="логотип makita">
             </a>
           </li>
-         <li>
+         <li class="popular-companies-item">
            <a href="#">
              <img src="img/content/companies/dewalt.jpg" width="146" height="44" alt="логотип dewalt">
             </a>
           </li>
-         <li>
+         <li class="popular-companies-item">
            <a href="#">
              <img src="img/content/companies/interskol.jpg" width="200" height="76" alt="логотип интерскол">
             </a>
           </li>
-         <li>
+         <li class="popular-companies-item">
            <a href="#">
              <img src="img/content/companies/hitachi.jpg" width="169" height="31" alt="логотип hitachi">
             </a>
           </li>
-         <li>
+         <li class="popular-companies-item">
            <a href="#">
              <img src="img/content/companies/lg.jpg" width="121" height="73" alt="логотип LG">
             </a>
           </li>
-         <li>
+         <li class="popular-companies-item">
            <a href="#">
              <img src="img/content/companies/aeg.jpg" width="151" height="98" alt="логотип AEG">
             </a>
           </li>
-         <li>
+         <li class="popular-companies-item">
            <a href="#">
              <img src="img/content/companies/metabo.jpg" width="204" height="69" alt="логотип metabo">
             </a>
@@ -202,7 +211,7 @@
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <ul class="services-buttons-list">
           <li>
-            <button class="service-button" type="button">Доставка</button>
+            <button class="service-button active" type="button">Доставка</button>
           </li>
           <li>
             <button class="service-button" type="button">Гарантия</button>
