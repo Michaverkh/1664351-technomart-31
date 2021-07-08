@@ -8,29 +8,29 @@ const creditItem = document.querySelector(".credit-item");
 const serviceItem = document.querySelectorAll(".service-item");
 
 serviceButtons.forEach(function(item){
-    item.addEventListener('click', function(){
+    item.addEventListener("click", function(){
         serviceButtons.forEach(function(item) {
-          item.classList.remove('active')
+          item.classList.remove("active")
         })
-        item.classList.add('active')
+        item.classList.add("active")
     })
 })
 
-deliveryButton.addEventListener('click', function(){
+deliveryButton.addEventListener("click", function(){
     serviceItem.forEach(function(part){
         part.classList.add("visually-hidden")
     });
     deliveryItem.classList.remove("visually-hidden");
 });
 
-guaranteeButton.addEventListener('click', function(){
+guaranteeButton.addEventListener("click", function(){
     serviceItem.forEach(function(part){
         part.classList.add("visually-hidden")
     });
     guaranteeItem.classList.remove("visually-hidden");
 });
 
-creditButton.addEventListener('click', function(){
+creditButton.addEventListener("click", function(){
     serviceItem.forEach(function(part){
         part.classList.add("visually-hidden")
     });
