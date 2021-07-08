@@ -1,0 +1,4 @@
+const buyButtons = document.querySelectorAll(".buy-button"),
+    noticePopup = document.querySelector(".notice-window"),
+    noticeClose = noticePopup.querySelector(".close-button");
+buyButtons.forEach(function(e) { e.addEventListener("click", function(e) { e.preventDefault(), noticePopup.classList.add("modal-show") }) }), noticeClose.addEventListener("click", function(e) { e.preventDefault(), noticePopup.classList.remove("modal-show") }), window.addEventListener("keydown", function(e) { 27 === e.keyCode && noticePopup.classList.contains("modal-show") && (e.preventDefault(), noticePopup.classList.remove("modal-show")) });
