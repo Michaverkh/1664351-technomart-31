@@ -916,8 +916,8 @@
   border-radius: 50%;
 }
 
-.companies-input-checkbox.disabled + label,
-.charging-type-input-radio.disabled + label {
+.companies-input-checkbox:disabled + label,
+.charging-type-input-radio:disabled + label {
   opacity: 0.4;
 }
 
